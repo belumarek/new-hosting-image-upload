@@ -4,11 +4,13 @@
 
 <div id="articles">
   <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
+    <div class="card p-2 mb-3">
+      <%= render article %>
+      <p>
+        <%= link_to "Show this article", article %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New article", new_article_path %>
+<%= link_to "New article", new_article_path, class:"btn btn-primary" %>
